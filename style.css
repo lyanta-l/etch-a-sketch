@@ -1,0 +1,18 @@
+:root {
+    --grid-size: 16;
+}
+
+#container {
+    height: 600px;
+    width: 600px;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sketch {
+    width: calc(100%/var(--grid-size));
+    height: calc(100%/var(--grid-size));
+    box-sizing: border-box;
+    border: 1px solid black;
+}
