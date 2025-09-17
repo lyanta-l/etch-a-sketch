@@ -1,5 +1,6 @@
 const container = document.querySelector("#container");
 const root = document.querySelector("html");
+const clearButton = document.querySelector("#clear");
 const gridSize = 24;
 root.style.setProperty('--grid-size',gridSize)
 for (let i = 0; i < 24 * 24; i++) {
@@ -10,3 +11,8 @@ for (let i = 0; i < 24 * 24; i++) {
     });
     container.appendChild(sketch);
 }
+clearButton.addEventListener("click",() => {
+    document.querySelectorAll(".sketch").forEach(item => {
+        item.classList.remove("hover");
+    })
+})
